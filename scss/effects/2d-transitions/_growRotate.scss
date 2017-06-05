@@ -1,0 +1,11 @@
+@mixin growRotate {
+	@include hacks();
+	@include prefixed(transition-property,transform);
+	@include prefixed(transition-duration,$mediumDuration);
+
+	&:hover,
+	&:focus,
+	&:active{
+		@include prefixed(transform,scale(1.1) rotate(8deg));
+	}
+}

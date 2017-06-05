@@ -1,0 +1,334 @@
+@import "options";
+@import "mixins";
+@import "hacks";
+
+/* 2D transitions */
+@import "effects/2d-transitions/grow";
+@if $includeClasses {
+	.#{$nameSpace}-grow {
+		@include grow();
+	}
+}
+
+@import "effects/2d-transitions/shrink";
+@if $includeClasses {
+	.#{$nameSpace}-shrink {
+		@include shrink();
+	}
+}
+
+@import "effects/2d-transitions/pulse";
+@if $includeClasses {
+	.#{$nameSpace}-pulse{
+		@include pulse();
+	}
+}
+
+@import "effects/2d-transitions/pulseGrow";
+@if $includeClasses {
+	.#{$nameSpace}-pulseGrow{
+		@include pulseGrow();
+	}
+}
+
+@import "effects/2d-transitions/pulseShrink";
+@if $includeClasses {
+	.#{$nameSpace}-pulseShrink{
+		@include pulseShrink();
+	}
+}
+
+@import "effects/2d-transitions/push";
+@if $includeClasses {
+	.#{$nameSpace}-push{
+		@include push();
+	}
+}
+
+@import "effects/2d-transitions/pop";
+@if $includeClasses {
+	.#{$nameSpace}-pop{
+		@include pop();
+	}
+}
+
+@import "effects/2d-transitions/bounceIn";
+@if $includeClasses {
+	.#{$nameSpace}-bounceIn{
+		@include bounceIn();
+	}
+}
+
+@import "effects/2d-transitions/bounceOut";
+@if $includeClasses {
+	.#{$nameSpace}-bounceOut{
+		@include bounceOut();
+	}
+}
+
+@import "effects/2d-transitions/rotate";
+@if $includeClasses {
+	.#{$nameSpace}-rotate{
+		@include rotate();
+	}
+}
+
+@import "effects/2d-transitions/growRotate";
+@if $includeClasses {
+	.#{$nameSpace}-growRotate{
+		@include growRotate();
+	}
+}
+
+@import "effects/2d-transitions/float";
+@if $includeClasses {
+	.#{$nameSpace}-float{
+		@include float();
+	}
+}
+
+@import "effects/2d-transitions/sink";
+@if $includeClasses{
+	.#{$nameSpace}-sink{
+		@include sink();
+	}
+}
+
+@import "effects/2d-transitions/bob";
+@if $includeClasses{
+	.#{$nameSpace}-bob{
+		@include bob();
+	}
+}
+
+@import "effects/2d-transitions/hang";
+@if $includeClasses{
+	.#{$nameSpace}-hang{
+		@include hang();
+	}
+}
+
+@import "effects/2d-transitions/skew";
+@if $includeClasses{
+	.#{$nameSpace}-skew{
+		@include skew();
+	}
+}
+
+@import "effects/2d-transitions/skewForward";
+@if $includeClasses{
+	.#{$nameSpace}-skewForward{
+		@include skewForward();
+	}
+}
+
+@import "effects/2d-transitions/skewBackward";
+@if $includeClasses{
+	.#{$nameSpace}-skewBackward{
+		@include skewBackward();
+	}
+}
+
+@import "effects/2d-transitions/wobbleHorizontal";
+@if $includeClasses{
+	.#{$nameSpace}-wobbleHorizontal{
+		@include wobbleHorizontal();
+	}
+}
+
+@import "effects/2d-transitions/wobbleVertical";
+@if $includeClasses{
+	.#{$nameSpace}-wobbleVertical{
+		@include wobbleVertical();
+	}
+}
+
+@import "effects/2d-transitions/wobbleToBottomRight";
+@if $includeClasses{
+	.#{$nameSpace}-wobbleToBottomRight{
+		@include wobbleToBottomRight();
+	}
+}
+
+@import "effects/2d-transitions/wobbleToTopRight";
+@if $includeClasses{
+	.#{$nameSpace}-wobbleToTopRight{
+		@include wobbleToTopRight();
+	}
+}
+
+@import "effects/2d-transitions/wobbleTop";
+@if $includeClasses{
+	.#{$nameSpace}-wobbleTop{
+		@include wobbleTop();
+	}
+}
+
+@import "effects/2d-transitions/wobbleBottom";
+@if $includeClasses{
+	.#{$nameSpace}-wobbleBottom{
+		@include wobbleBottom();
+	}
+}
+
+@import "effects/2d-transitions/wobbleSkew";
+@if $includeClasses{
+	.#{$nameSpace}-wobbleSkew{
+		@include wobbleSkew();
+	}
+}
+
+@import "effects/2d-transitions/buzz";
+@if $includeClasses{
+	.#{$nameSpace}-buzz{
+		@include buzz();
+	}
+}
+
+@import "effects/2d-transitions/buzzOut";
+@if $includeClasses{
+	.#{$nameSpace}-buzzOut{
+		@include buzzOut();
+	}
+}
+
+@import "effects/2d-transitions/forward";
+@if $includeClasses{
+	.#{$nameSpace}-forward{
+		@include forward();
+	}
+}
+
+@import "effects/2d-transitions/backward";
+@if $includeClasses{
+	.#{$nameSpace}-backward{
+		@include backward();
+	}
+}
+
+/*background-transitions*/
+@import "effects/background-transitions/fade";
+@if $includeClasses{
+	.#{$nameSpace}-fade{
+		@include fade();
+	}
+}
+
+@import "effects/background-transitions/back-pulse";
+@if $includeClasses{
+	.#{$nameSpace}-back-pulse{
+		@include back-pulse();
+	}
+}
+
+@import "effects/background-transitions/sweep-to-right";
+@if $includeClasses{
+	.#{$nameSpace}-sweep-to-right {
+		@include sweep-to-right();
+	}
+}
+
+@import "effects/background-transitions/sweep-to-left";
+@if $includeClasses{
+	.#{$nameSpace}-sweep-to-left {
+		@include sweep-to-left();
+	}
+}
+
+@import "effects/background-transitions/sweep-to-bottom";
+@if $includeClasses{
+	.#{$nameSpace}-sweep-to-bottom {
+		@include sweep-to-bottom();
+	}
+}
+
+@import "effects/background-transitions/sweep-to-top";
+@if $includeClasses{
+	.#{$nameSpace}-sweep-to-top {
+		@include sweep-to-top();
+	}
+}
+
+@import "effects/background-transitions/bounce-to-right";
+@if $includeClasses{
+	.#{$nameSpace}-bounce-to-right {
+		@include bounce-to-right();
+	}
+}
+
+@import "effects/background-transitions/bounce-to-left";
+@if $includeClasses{
+	.#{$nameSpace}-bounce-to-left {
+		@include bounce-to-left();
+	}
+}
+
+@import "effects/background-transitions/bounce-to-bottom";
+@if $includeClasses{
+	.#{$nameSpace}-bounce-to-bottom {
+		@include bounce-to-bottom();
+	}
+}
+
+@import "effects/background-transitions/bounce-to-top";
+@if $includeClasses{
+	.#{$nameSpace}-bounce-to-top {
+		@include bounce-to-top();
+	}
+}
+
+@import "effects/background-transitions/radial-in";
+@if $includeClasses{
+	a.#{$nameSpace}-radial-in {
+		@include radial-in();
+	}
+}
+
+@import "effects/background-transitions/radial-out";
+@if $includeClasses{
+	a.#{$nameSpace}-radial-out {
+		@include radial-out();
+	}
+}
+
+@import "effects/background-transitions/rectangle-in";
+@if $includeClasses{
+	a.#{$nameSpace}-rectangle-in {
+		@include rectangle-in();
+	}
+}
+
+@import "effects/background-transitions/rectangle-out";
+@if $includeClasses{
+	a.#{$nameSpace}-rectangle-out {
+		@include rectangle-out();
+	}
+}
+
+@import "effects/background-transitions/shutter-in-horizontal";
+@if $includeClasses{
+	a.#{$nameSpace}-shutter-in-horizontal {
+		@include shutter-in-horizontal();
+	}
+}
+
+@import "effects/background-transitions/shutter-out-horizontal";
+@if $includeClasses{
+	a.#{$nameSpace}-shutter-out-horizontal {
+		@include shutter-out-horizontal();
+	}
+}
+
+@import "effects/background-transitions/shutter-in-vertical";
+@if $includeClasses{
+	a.#{$nameSpace}-shutter-in-vertical {
+		@include shutter-in-vertical();
+	}
+}
+
+@import "effects/background-transitions/shutter-out-vertical";
+@if $includeClasses{
+	a.#{$nameSpace}-shutter-out-vertical {
+		@include shutter-out-vertical();
+	}
+}

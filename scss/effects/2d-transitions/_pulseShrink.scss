@@ -1,0 +1,18 @@
+@include keyframes(#{$nameSpace}-pulseShrink) {
+	50%{
+		@include prefixed(transform,scale(0.8));
+	}
+}
+
+@mixin pulseShrink{
+	@include hacks();
+
+	&:hover,
+	&:active,
+	&:focus{
+		@include prefixed(animation-name,#{$nameSpace}-pulseShrink);
+		@include prefixed(animation-duration,1s);
+		@include prefixed(animation-timing-function,linear);
+		@include prefixed(animation-iteration-count,infinite);
+	}
+}

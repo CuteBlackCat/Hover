@@ -1,0 +1,23 @@
+@include keyframes(#{$nameSpace}-back-pulse) {
+	50%{
+		background: rgba(220,20,60,.75);
+	}
+}
+
+@mixin back-pulse {
+	@include prefixed(transition-duration,$slowDuration);
+	@include prefixed(transition-property,"color,background");
+
+	&:hover,
+	&:active,
+	&:focus{
+		@include prefixed(animation-name,#{$nameSpace}-back-pulse);
+		@include prefixed(animation-duration,1s);
+		@include prefixed(animation-delay,$slowDuration);
+		@include prefixed(animation-timing-function,linear);
+		@include prefixed(animation-iteration-count,infinite);
+		background:$activeColor;
+		color:white;
+		box-shadow: $box-shadow;
+	}
+}

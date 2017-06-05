@@ -1,0 +1,52 @@
+@include keyframes(#{$nameSpace}-buzzOut) {
+	10% {
+		@include prefixed(transform, translateX(3px) rotate(2deg));
+	}
+
+	20% {
+		@include prefixed(transform, translateX(-3px) rotate(-2deg));
+	}
+
+	30% {
+		@include prefixed(transform, translateX(3px) rotate(2deg));
+	}
+
+	40% {
+		@include prefixed(transform, translateX(-3px) rotate(-2deg));
+	}
+
+	50% {
+		@include prefixed(transform, translateX(2px) rotate(1deg));
+	}
+
+	60% {
+		@include prefixed(transform, translateX(-2px) rotate(-1deg));
+	}
+
+	70% {
+		@include prefixed(transform, translateX(2px) rotate(1deg));
+	}
+
+	80% {
+		@include prefixed(transform, translateX(-2px) rotate(-1deg));
+	}
+
+	90% {
+		@include prefixed(transform, translateX(1px) rotate(0));
+	}
+
+	100% {
+		@include prefixed(transform, translateX(-1px) rotate(0));
+	}
+}
+
+@mixin buzzOut {
+	&:hover,
+	&:active,
+	&:focus{
+		@include prefixed(animation-name,#{$nameSpace}-buzzOut);
+		@include prefixed(animation-duration,1s);
+		@include prefixed(animation-timing-function,linear);
+		@include prefixed(animation-iteration-count,1);
+	}
+}

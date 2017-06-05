@@ -1,0 +1,35 @@
+@mixin bounce-to-bottom {
+	position:relative;
+	@include prefixed(transform,  translateZ(0));
+	@include prefixed(transition-property,color);
+	@include prefixed(transition-duration,$mediumDuration);
+
+	&:before{
+		content:'';
+		position:absolute;
+		z-index: -1;
+		left:0;
+		right:0;
+		top:0;
+		bottom: 0;
+		background: $activeColor;
+		@include prefixed(transition-property,transform);
+		@include prefixed(transition-duration,$mediumDuration);
+		@include prefixed(transition-timing-function,ease-out);
+		@include prefixed(transform,scaleY(0));
+		@include prefixed(transform-origin,50% 0%);
+	}
+
+
+	&:hover,
+	&:active,
+	&:focus{
+		color:white;
+		box-shadow: $box-shadow;
+
+		&:before{
+			@include prefixed(transform,scaleY(1));
+			@include prefixed(transition-timing-function,cubic-bezier(.52,1.64,.37,.66));
+		}
+	}
+}

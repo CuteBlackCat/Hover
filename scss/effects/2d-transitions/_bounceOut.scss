@@ -1,0 +1,11 @@
+@mixin bounceOut {
+	@include hacks();
+	@include prefixed(transition-duration,$slowDuration);
+
+	&:hover,
+	&:focus,
+	&:active{
+		@include prefixed(transform,scale(0.8));
+		@include prefixed(transition-timing-function,cubic-bezier(.47,2.02,.31,-.36));
+	}
+}
