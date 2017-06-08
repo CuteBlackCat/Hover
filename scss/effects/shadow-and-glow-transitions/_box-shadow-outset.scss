@@ -1,0 +1,10 @@
+@mixin box-shadow-outset {
+	@include prefixed(transition-property,box-shadow);
+	@include prefixed(transition-duration,.5s);
+
+	&:hover,
+	&:active,
+	&:focus{
+		box-shadow:10px 10px 10px darkslategray;
+	}
+}

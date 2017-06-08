@@ -1,0 +1,29 @@
+@mixin overline-from-right {
+
+	@include prefixed(transform,translateZ(0));
+	position:relative;
+	overflow:hidden;
+
+	&:before{
+		content:'';
+		position:absolute;
+		left:100%;
+		right:0;
+		top:0;
+		height:4px;
+		z-index:-1;
+		background: $activeColor;
+		@include prefixed(transition-duration,.5s);
+		@include prefixed(transition-property,'left');
+		@include prefixed(transition-timing-function,ease-out);
+	}
+
+	&:hover,
+	&:active,
+	&:focus{
+		&:before{
+			left:0;
+			box-shadow: $box-shadow;
+		}
+	}
+}

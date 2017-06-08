@@ -1,0 +1,32 @@
+@mixin outline-in {
+	$outerBorderWidth: 4px;
+	$innerBorderWidth: 4px;
+
+	position:relative;
+
+	&:before{
+		content:'';
+		position:absolute;
+		left:-($outerBorderWidth + $innerBorderWidth) * 2;
+		top:-($outerBorderWidth + $innerBorderWidth) * 2;
+		right:-($outerBorderWidth + $innerBorderWidth) * 2;
+		bottom:-($outerBorderWidth + $innerBorderWidth) * 2;
+		border:$outerBorderWidth solid $primaryColor;
+		border-radius:3px;
+		opacity:0;
+		@include prefixed(transition-property,"left,top,right,bottom");
+		@include prefixed(transition-duration,.3s);
+	}
+
+	&:hover,
+	&:active,
+	&:focus{
+		&:before{
+			left:-($outerBorderWidth + $innerBorderWidth);
+			top:-($outerBorderWidth + $innerBorderWidth);
+			right:-($outerBorderWidth + $innerBorderWidth);
+			bottom:-($outerBorderWidth + $innerBorderWidth);
+			opacity:1;
+		}
+	}
+}

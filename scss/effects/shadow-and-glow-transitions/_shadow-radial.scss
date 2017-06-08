@@ -1,0 +1,38 @@
+@mixin shadow-radial {
+	position:relative;
+
+	&:after,
+	&:before{
+		pointer-events:none;
+		position:absolute;
+		content:'';
+		left:0;
+		width:100%;
+		background-repeat:no-repeat;
+		height:5px;
+		opacity:0;
+		@include prefixed(transition-duration,.5s);
+		@include prefixed(transition-property,opacity);
+	}
+
+	&:before {
+		bottom:100%;
+		background: -webkit-radial-gradient(50% 150%,ellipse,aqua 0%, rgba(0,255,255,0) 80%);
+		background:radial-gradient(ellipse at 50% 150%,aqua 0%,rgba(0,255,255,0) 80%);
+	}
+
+	&:after {
+		top:100%;
+		background: -webkit-radial-gradient(50% -50%,ellipse,aqua 0%, rgba(0,255,255,0) 80%);
+		background:radial-gradient(ellipse at 50% -50%,aqua 0%,rgba(0,255,255,0) 80%);
+	}
+
+	&:hover,
+	&:active,
+	&:focus{
+		&:after,
+		&:before{
+			opacity:1;
+		}
+	}
+}

@@ -1,0 +1,32 @@
+@mixin outline-out {
+	$outerBorderWidth: 4px;
+	$innerBorderWidth: 4px;
+
+	position:relative;
+
+	&:before{
+		content:'';
+		position:absolute;
+		left:0;
+		top:0;
+		right:0;
+		bottom:0;
+		border:$outerBorderWidth solid $primaryColor;
+		border-radius:3px;
+		opacity:0;
+		@include prefixed(transition-property,"left,top,right,bottom");
+		@include prefixed(transition-duration,.3s);
+	}
+
+	&:hover,
+	&:active,
+	&:focus{
+		&:before{
+			left:-($outerBorderWidth + $innerBorderWidth);
+			top:-($outerBorderWidth + $innerBorderWidth);
+			right:-($outerBorderWidth + $innerBorderWidth);
+			bottom:-($outerBorderWidth + $innerBorderWidth);
+			opacity:1;
+		}
+	}
+}

@@ -1,0 +1,33 @@
+@mixin float-shadow {
+	position:relative;
+	@include prefixed(transition-property,transform);
+	@include prefixed(transition-duration,.5s);
+	@include prefixed(transform,translateZ(0));
+
+	&:before{
+		content:'';
+		pointer-events:none;
+		position:absolute;
+		top:100%;
+		left:5%;
+		width: 90%;
+		height:10px;
+		opacity: 0;
+		z-index: -1;
+		background: -webkit-radial-gradient(center,ellipse,rgba(0,255,255,.35) 0%,rgba(0,255,255,0) 80%);
+		background:radial-gradient(ellipse at center,rgba(0,255,255,.35) 0%,rgba(0,255,255,0) 80%);
+		@include prefixed(transition-duration,.5s);
+		@include prefixed(transition-property,"transform,opacity");
+	}
+
+	&:hover,
+	&:active,
+	&:focus{
+		@include prefixed(transform,translateY(-5px));
+
+		&:before{
+			opacity:1;
+			@include prefixed(transform,translateY(5px));
+		}
+	}
+}

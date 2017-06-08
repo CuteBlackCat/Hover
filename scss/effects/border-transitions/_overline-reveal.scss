@@ -1,0 +1,28 @@
+@mixin overline-reveal {
+
+	@include prefixed(transform,translateZ(0));
+	position:relative;
+	overflow:hidden;
+
+	&:before{
+		content:'';
+		position:absolute;
+		left:0;
+		right:0;
+		top:0;
+		border:0 solid $activeColor;
+		z-index:-1;
+		@include prefixed(transition-duration,.1s);
+		@include prefixed(transition-property,border);
+		@include prefixed(transition-timing-function,ease-out);
+	}
+	/*也可以用高度*/
+
+	&:hover,
+	&:active,
+	&:focus{
+		&:before{
+			border-width:2px;
+		}
+	}
+}

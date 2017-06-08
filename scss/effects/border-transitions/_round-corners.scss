@@ -1,0 +1,10 @@
+@mixin round-corners {
+	@include prefixed(transition-property,border-radius);
+	@include prefixed(transition-duration,.3s);
+
+	&:hover,
+	&:active,
+	&:focus{
+		border-radius:20px;
+	}
+}

@@ -1,0 +1,13 @@
+@mixin hollow {
+	$borderWidth:4px;
+
+	@include prefixed(transition-property,background);
+	@include prefixed(transition-duration,$mediumDuration);
+	box-shadow: inset 0 0 0 $borderWidth $primaryColor;
+
+	&:hover,
+	&:active,
+	&:focus{
+		background:none;
+	}
+}

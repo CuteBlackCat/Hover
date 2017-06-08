@@ -332,3 +332,173 @@
 		@include shutter-out-vertical();
 	}
 }
+
+/*border-transitions*/
+@import "effects/border-transitions/border-fade";
+@if $includeClasses{
+	a.#{$nameSpace}-border-fade {
+		@include border-fade();
+	}
+}
+
+@import "effects/border-transitions/hollow";
+@if $includeClasses{
+	a.#{$nameSpace}-hollow {
+		@include hollow();
+	}
+}
+
+@import "effects/border-transitions/trim";
+@if $includeClasses{
+	a.#{$nameSpace}-trim {
+		@include trim();
+	}
+}
+
+@import "effects/border-transitions/ripple-out";
+@if $includeClasses{
+	a.#{$nameSpace}-ripple-out {
+		@include ripple-out();
+	}
+}
+
+@import "effects/border-transitions/ripple-in";
+@if $includeClasses{
+	a.#{$nameSpace}-ripple-in {
+		@include ripple-in();
+	}
+}
+
+@import "effects/border-transitions/outline-in";
+@if $includeClasses{
+	a.#{$nameSpace}-outline-in {
+		@include outline-in();
+	}
+}
+
+@import "effects/border-transitions/outline-out";
+@if $includeClasses{
+	a.#{$nameSpace}-outline-out {
+		@include outline-out();
+	}
+}
+
+@import "effects/border-transitions/round-corners";
+@if $includeClasses{
+	a.#{$nameSpace}-round-corners {
+		@include round-corners();
+	}
+}
+
+@import "effects/border-transitions/underline-from-left";
+@if $includeClasses{
+	a.#{$nameSpace}-underline-from-left {
+		@include underline-from-left();
+	}
+}
+
+@import "effects/border-transitions/underline-from-center";
+@if $includeClasses{
+	a.#{$nameSpace}-underline-from-center {
+		@include underline-from-center();
+	}
+}
+
+@import "effects/border-transitions/underline-from-right";
+@if $includeClasses{
+	a.#{$nameSpace}-underline-from-right {
+		@include underline-from-right();
+	}
+}
+
+@import "effects/border-transitions/overline-from-right";
+@if $includeClasses{
+	a.#{$nameSpace}-overline-from-right {
+		@include overline-from-right();
+	}
+}
+
+@import "effects/border-transitions/overline-from-left";
+@if $includeClasses{
+	a.#{$nameSpace}-overline-from-left {
+		@include overline-from-left();
+	}
+}
+
+@import "effects/border-transitions/overline-from-center";
+@if $includeClasses{
+	a.#{$nameSpace}-overline-from-center {
+		@include overline-from-center();
+	}
+}
+
+@import "effects/border-transitions/reveal";
+@if $includeClasses{
+	a.#{$nameSpace}-reveal {
+		@include reveal();
+	}
+}
+
+@import "effects/border-transitions/underline-reveal";
+@if $includeClasses{
+	a.#{$nameSpace}-underline-reveal {
+		@include underline-reveal();
+	}
+}
+
+@import "effects/border-transitions/overline-reveal";
+@if $includeClasses{
+	a.#{$nameSpace}-overline-reveal {
+		@include overline-reveal();
+	}
+}
+
+/*shadow-and-glow-transitions*/
+@import "effects/shadow-and-glow-transitions/shadow";
+@if $includeClasses{
+	a.#{$nameSpace}-shadow {
+		@include shadow();
+	}
+}
+
+@import "effects/shadow-and-glow-transitions/grow-shadow";
+@if $includeClasses{
+	a.#{$nameSpace}-grow-shadow {
+		@include grow-shadow();
+	}
+}
+
+@import "effects/shadow-and-glow-transitions/float-shadow";
+@if $includeClasses{
+	a.#{$nameSpace}-float-shadow {
+		@include float-shadow();
+	}
+}
+
+@import "effects/shadow-and-glow-transitions/glow";
+@if $includeClasses{
+	a.#{$nameSpace}-glow {
+		@include glow();
+	}
+}
+
+@import "effects/shadow-and-glow-transitions/shadow-radial";
+@if $includeClasses{
+	a.#{$nameSpace}-shadow-radial {
+		@include shadow-radial();
+	}
+}
+
+@import "effects/shadow-and-glow-transitions/box-shadow-outset";
+@if $includeClasses{
+	a.#{$nameSpace}-box-shadow-outset {
+		@include box-shadow-outset();
+	}
+}
+
+@import "effects/shadow-and-glow-transitions/box-shadow-inset";
+@if $includeClasses{
+	a.#{$nameSpace}-box-shadow-inset {
+		@include box-shadow-inset();
+	}
+}

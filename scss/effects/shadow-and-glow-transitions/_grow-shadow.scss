@@ -1,0 +1,11 @@
+@mixin grow-shadow {
+	@include prefixed(transition-property,'box-shadow,transform');
+	@include prefixed(transition-duration,.5s);
+
+	&:hover,
+	&:active,
+	&:focus{
+		box-shadow: 0 14px 10px -10px rgba(0,255,255,.5);
+		@include prefixed(transform,scale(1.1));
+	}
+}

@@ -1,0 +1,36 @@
+@include keyframes(#{$nameSpace}-ripple-out) {
+	100%{
+		top:-(6px + 6px);
+		left:-(6px + 6px);
+		top:-(6px + 6px);
+		right:-(6px + 6px);
+		opacity:0;
+	}
+}
+
+@mixin ripple-out {
+	$outerBorderWidth:6px;
+	$innerBorderWidth:6px;
+
+	position:relative;
+
+	&:before{
+		content:'';
+		position:absolute;
+		left:0;
+		top:0;
+		right:0;
+		bottom:0;
+		border: $outerBorderWidth solid $primaryColor;
+		border-radius:3px;
+		@include prefixed(animation-duration,1s)
+	}
+
+	&:hover,
+	&:active,
+	&:focus{
+		&:before{
+			@include prefixed(animation-name,#{$nameSpace}-ripple-out)
+		}
+	}
+}
