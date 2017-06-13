@@ -1,0 +1,26 @@
+@mixin bubble-top {
+	position:relative;
+	@include prefixed(transform,translateZ(0));
+
+	&:before{
+		pointer-events:none;
+		position:absolute;
+		content:'';
+		z-index: -1;
+		top:0;
+		left:calc(50% - #{$tipWidth} );
+		border-style:solid;
+		border-width:0 $tipHeight $tipWidth $tipHeight;
+		border-color:transparent transparent $tipColor transparent;
+		@include prefixed(transition-duration,$mediumDuration);
+		@include prefixed(transition-property,transform);
+	}
+
+	&:hover,
+	&:focus,
+	&:active{
+		&:before{
+			@include prefixed(transform,translateY(-(#{$tipHeight})));
+		}
+	}
+}
